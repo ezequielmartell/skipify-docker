@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><title>Skipify</title></head>
+<body>
+    <h1>Skipify</h1>
+    <h2>Authorize Spotify</h2>
+    <a href="{{ spotify_auth_url }}">
+        <button>Connect with Spotify</button>
+    </a>
+
+    <h2>Add/Update Artists to Skip</h2>
+    <form method="post">
+        Name as listed in Spotify: <input type="text" name="artist" required><br>
+        <!-- Key: <input type="text" name="key" required><br> -->
+        <!-- Value: <input type="text" name="value" required><br> -->
+        <input type="submit" value="Skip Artist">
+    </form>
+    <h2>Auto Skip Songs by these Artists</h2>
+    <ul>
+    {% for artist in data %}
+        <li>{{ artist }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
