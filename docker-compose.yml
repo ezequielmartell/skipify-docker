@@ -1,0 +1,11 @@
+services:
+  skipify:
+    container_name: skipify
+    build: .
+    ports:
+     - ${PORT}:${PORT}
+    restart: "always"
+    volumes:
+      - ./data:/data
+    env_file:
+      - .env

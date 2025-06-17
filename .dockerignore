@@ -1,0 +1,7 @@
+__pychache__
+.venv
+.env
+spotify.py
+tasks.py
+test.py
+data.json
